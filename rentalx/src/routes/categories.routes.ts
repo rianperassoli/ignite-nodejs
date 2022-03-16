@@ -16,13 +16,13 @@ categoriesRoutes.post("/", (request, response) => {
 
   categoriesRepository.create({ name, description });
 
-  response.status(201).json({});
+  return response.status(201).json({});
 });
 
 categoriesRoutes.get("/", (request, response) => {
   const all = categoriesRepository.list();
 
-  response.json(all);
+  return response.json(all);
 });
 
 export { categoriesRoutes };
