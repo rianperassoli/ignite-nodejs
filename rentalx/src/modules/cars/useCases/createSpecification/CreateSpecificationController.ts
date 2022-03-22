@@ -9,10 +9,10 @@ class CreateSpecificationController {
     this.createSpecificationUseCase = createSpecificationUseCase;
   }
 
-  handle(request: Request, response: Response): Response {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { name, description } = request.body;
 
-    this.createSpecificationUseCase.execute({ name, description });
+    await this.createSpecificationUseCase.execute({ name, description });
 
     return response.status(201).send();
   }
