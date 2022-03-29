@@ -8,22 +8,22 @@ import {
 import { Specification } from "../entities/Specification";
 
 class SpecificationRepository implements ISpecificationRepository {
-  private respository: Repository<Specification>;
+  private repository: Repository<Specification>;
 
   constructor() {
-    this.respository = getRepository(Specification);
+    this.repository = getRepository(Specification);
   }
   async create({ name, description }: ICreateSpecificationDTO): Promise<void> {
-    const specification = this.respository.create({
+    const specification = this.repository.create({
       name,
       description,
     });
 
-    await this.respository.save(specification);
+    await this.repository.save(specification);
   }
 
   async findByName(name: string): Promise<Specification> {
-    const specification = await this.respository.findOne({ name });
+    const specification = await this.repository.findOne({ name });
 
     return specification;
   }
