@@ -1,13 +1,19 @@
 # Cadastro de carro
 
 **Requisito Funcional**
+
 Deve ser possível cadastrar um novo carro.
+
 Deve ser possível listar todas as categorias.
 
 **Regra de negócio**
+
 Não deve ser possível cadastrar um carro com uma placa já existente.
+
 Não deve ser possível alterar a placa de um carro já cadastrado.
+
 O carro deve ser cadastrado, por padrão, com disponibilidade.
+
 O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 
@@ -53,9 +59,13 @@ O usuário responsável pelo cadastro deve ser um usuário administrador.
 # Aluguel de carro
 
 **Requisito funcional**
+
 Deve ser possível cadastrar um aluguel.
 
 **Regra de negócio**
+
 O aluguel deve ter duração mínima de 24 horas.
+
 Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
+
 Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
