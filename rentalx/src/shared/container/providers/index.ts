@@ -11,3 +11,9 @@ container.registerSingleton<IMailProvider>(
   "MailProvider",
   EtherealMailProvider
 );
+
+// Caso nao funcionar o envio de email, utilizar a criação desta forma
+// container.registerInstance<IMailProvider>(
+//   "MailProvider",
+//   new EtherealMailProvider()
+// );
