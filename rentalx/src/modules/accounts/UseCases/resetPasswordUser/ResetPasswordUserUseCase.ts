@@ -22,10 +22,7 @@ class ResetPasswordUserUseCase {
     @inject("DateProvider")
     private dateProvider: IDateProvider,
     @inject("UsersRepository")
-    private usersRepository: IUsersRepository,
-
-    @inject("MailProvider")
-    private mailProvider: IMailProvider
+    private usersRepository: IUsersRepository
   ) {}
 
   async execute({ token, password }: IRequest): Promise<void> {
